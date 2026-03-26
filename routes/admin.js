@@ -1,26 +1,27 @@
 const {Router}=require("express")
 const adminRouter=Router()
-adminRouter.post("signup/",function(req,res){
+const {adminModel}=require("../db")
+adminRouter.post("/signup",function(req,res){
     res.json({
         msg:""
     })
 })
-adminRouter.post("signin/",function(req,res){
+adminRouter.post("/signin",function(req,res){
     res.json({
         msg:""
     })
 })
-adminRouter.post("course/",function(req,res){
+adminRouter.post("/course",function(req,res){
     res.json({
         msg:""
     })
 })
-adminRouter.put("course/",function(req,res){
+adminRouter.put("/course",function(req,res){
     res.json({
         msg:""
     })
 })
-adminRouter.get("course/bulk/",function(req,res){
+adminRouter.get("/course/bulk",function(req,res){
     res.json({
         msg:""
     })
