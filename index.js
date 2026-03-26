@@ -1,29 +1,9 @@
 const express=require("express");
 const app=express();
-app.post("/user/signup",function(req,res){
-    res.json({
-        msg:""
-    })
-})
-app.post("/user/signin",function(req,res){
-    res.json({
-        msg:""
-    })
-})
-app.get("/user/purchases",function(req,res){
-    res.json({
-        msg:""
-    })
-})
-app.post("/course/purchases",function(req,res){
-    res.json({
-        msg:""
-    })
-})
-app.post("/courses",function(req,res){
-    res.json({
-        msg:""
-    })
-})
+app.use(express.json());
 
+const {userRouter} =require("./routes/users")
+const {courseRouter} =require("./routes/course")
+app.use("/api/user",userRouter);
+app.use("/api/course",courseRouter);
 app.listen(3000)
