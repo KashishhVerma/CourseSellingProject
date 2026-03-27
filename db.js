@@ -7,13 +7,13 @@ const userSchema = new Schema({
   email: { type: String, unique: true },
   password: String,
   firstName: String,
-  lastname: String,
+  lastName: String,
 });
 const adminSchema = new Schema({
   email: { type: String, unique: true },
   password: String,
   firstName: String,
-  lastname: String,
+  lastName: String,
 });
 const courseSchema = new Schema({
   title: String,
@@ -31,8 +31,9 @@ const adminModel = mongoose.model("admin", adminSchema);
 const courseModel = mongoose.model("course", courseSchema);
 const purchaseModel = mongoose.model("purchase", purchaseSchema);
 module.exports = {
-  adminModel,
+ 
   userModel,
+  adminModel,
   courseModel,
   purchaseModel,
 };
